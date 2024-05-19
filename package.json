@@ -1,10 +1,12 @@
 {
   "name": "vue-quick-toastify",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/quick-toastify.common.js",
+  "files": ["dist/*", ".js", ".json"],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name quick-toastify ./src/components/QuickToastify.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

@@ -1,15 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <button @click="this.show = true">Click Me</button>
+  <QuickToastify
+    :isShow="show"
+    :close="close"
+  />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import QuickToastify from './components/QuickToastify.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    QuickToastify
+  },
+  data(){
+    return{
+      show: false
+    }
+  },
+  methods:{
+    close(){
+      this.show = false;
+    }
   }
 }
 </script>
